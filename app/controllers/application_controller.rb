@@ -48,8 +48,8 @@ class ApplicationController < Sinatra::Base
     #will find the instance of the model to update, using the id from params, update and save that instance.
     article = Article.find(params[:id])
     binding.pry
-    article.title = params["article"]["title"] unless params["article"]["title"].empty?
-    article.content = params["article"]["content"] unless params["article"]["content"].empty?
+    article.title = params["title"] unless params["title"].empty?
+    article.content = params["content"] unless params["content"].empty?
     article.save
   end
   
