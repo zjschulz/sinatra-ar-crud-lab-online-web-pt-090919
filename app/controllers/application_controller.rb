@@ -49,7 +49,7 @@ class ApplicationController < Sinatra::Base
     article = Article.find(params[:id])
     article.title = params["title"] unless params["title"].empty?
     article.content = params["content"] unless params["content"].empty?
-    article.save
+    article.update
   end
   
   #DELETE 
